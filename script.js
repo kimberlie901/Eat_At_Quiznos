@@ -19,7 +19,6 @@ var headerContainer = document.querySelector(".header")
 
 var startButton = document.querySelector(".startbtn")
 
-var timerEl = document.getElementById("time")
 
 startButton.addEventListener("click", function(){
     console.log("clicked");
@@ -29,58 +28,76 @@ startButton.addEventListener("click", function(){
 var questions = [
     
     {
-        question: "What does the acronym CSS stand for?",
+        questionText: "What does the acronym CSS stand for?",
         choices: ["a. Changing Style Sheets", "b. Cascading Style Sheets", "c. Color Style Sheets", "d. Colorbook Style Sheets"],
         answer: "b. Cascading Style Sheets"
     },
     {
-        question: "What does the acronym HTML stand for?",
+        questionText: "What does the acronym HTML stand for?",
         choices: ["a. HyperText Markup Language", "b. HighTest Markings Level", "c. HouseplantTree Mini Love", "d. HoroscopeTesting Manufactor Lab"],
         answer: "a. HyperText Markup Language",
     },
     {
-        question: "JavaScript is the scripting language of Java?",
+        questionText: "JavaScript is the scripting language of Java?",
         choices: ["a. TRUE", "b. FALSE"],
         answer: "b.FALSE",
     },
     {
-        question: "Does the acronym DOM stand for Document Object Model?",
+        questionText: "Does the acronym DOM stand for Document Object Model?",
         choices: ["a TRUE", "b. FALSE"],
         answer: "a. TRUE",
     },
     {
-        question: "Where do you put your JavaScript code?",
+        questionText: "Where do you put your JavaScript code?",
         choices: ["a. <head>", "b. <title>", "c. <script>", "d. <body>"],
         answer: "c. <script>"
     },
     {
-        question: "What is the largest header in HTML by default?",
+        questionText: "What is the largest header in HTML by default?",
         choices: ["a. h6", "b. h4", "c. h2", "d. h1"],
         answer: "d. h1"
     },
     {
-        question: "An array is a special type of boolean in Javascript that can hold more than one value?",
+        questionText: "An array is a special type of boolean in Javascript that can hold more than one value?",
         choices: ["a. TRUE", "b. FALSE"],
         answer: "b. FALSE",
     },
     {
-        question: "Which attribute allows an image link to show a text label if the image cannot be displayed?",
+        questionText: "Which attribute allows an image link to show a text label if the image cannot be displayed?",
         choices: ["a. src", "b. alt", "c. lang", "d. title"],
         answer: "b. alt",
     },
     {
-        question: "Which one of these is not used to declare a JavaScript variable?",
+        questionText: "Which one of these is not used to declare a JavaScript variable?",
         choices: ["a. var", "b. const", "c. for", "d. let"],
         answer: "c. for",
     },
     {
-        question: "What property is used to change the background color in CSS?",
+        questionText: "What property is used to change the background color in CSS?",
         choices: ["a. background-color", "b. color-background", "c. color-space", "d. color-choice"],
         answer: "a. background-color",
     },
 
 
 ]
+
+// time variables 
+var timerEl = document.getElementById("time");
+var timeLeft = document.getElementById("timeLeft");
+var timesDone = document.getElementById("timesDone");
+
+// start quiz variables
+var startQuiz = document.getElementById("startButton");
+
+// question varaibles 
+var questions = document.getElementById("quizQuestions");
+var quizQuestion = document.getElementById("questionText");
+var choiceA = document.getElementById("choice0");
+var choiceB = document.getElementById("choice1");
+var choiceC = document.getElementById("choice2");
+var choiceD = document.getElementById("choice3");
+
+
 
 
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,17 +10,36 @@
 </head>
 <body>
     <header class="header">
-        <nav >
-            <h1>Do You Know More Than a 5th Grader?: Web Development Edition</h1>
+        <nav>
+            <h1><strong>Are You Smarter Than a 5th Grader?: Web Development Edition</strong></h1>
         </nav>
         <button class="startbtn">
             Start Quiz
         </button>
-        
+    
     </header>
-    
+    <!-- shows how much time is left-->
     <time>Time Left: <span id="time"></span></time>
-    
+    <div class="row">
+    <!-- link to high scores -->    
+        <a href="HighScores.html">View HighScores</a>
+    </div>
+    <div class="starterContainer" id="show">
+        <h1> Coding Quiz Challenge?</h1>
+            <p> Let's test your knowlege on Web Development Fundamentals. Answer the questions within the alloted time given. Incorrect answers will penalize your time. </p>
+    </div>
+    <div hidden class=questionCard id="card">
+        <h2 id="questionText"></h2>
+            <div id="quizChoices">
+                <button id="choice0" class="button choice-button"></button>
+                <button id="choice1" class="button choice-button"></button>
+                <button id="choice2" class="button choice-button"></button>
+                <button id="choice3" class="button choice-button"></button>
+            </div>
+    </div>
+    <div hidden class=scoreCard id="card">
+        <h2>Quiz Done!</h2>
+    </div>
     <div class="mainContainer"> 
         <h1> Question </h1>
         <div>
