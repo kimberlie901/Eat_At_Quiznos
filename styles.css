@@ -1,0 +1,47 @@
+/** Body Styles */
+
+body {
+    background-color: whitesmoke;
+    font-family:'Courier New', Courier, monospace;
+    margin: 0;
+}
+
+/** Header Styles */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color:pink;
+    color: white;
+    padding: 2dvh;
+}
+
+h1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+time {
+    text-align: center;
+    float: right;
+    min-width: 50px;
+}
+
+
+
+
+
+
+
+/* * Footer Styles
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: pink;
+    color: white;
+    padding: 1dvh;
+} */
