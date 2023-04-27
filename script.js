@@ -16,9 +16,7 @@
 /** 10 questions, 4 html, 4 javascript, 2 css */
 
 var headerContainer = document.querySelector(".header")
-
 var startButton = document.querySelector(".startbtn")
-
 
 startButton.addEventListener("click", function(){
     console.log("clicked");
@@ -83,22 +81,19 @@ var questions = [
 
 // time variables 
 var timerEl = document.getElementById("time");
-var timeLeft = document.getElementById("timeLeft");
-var timesDone = document.getElementById("timesDone");
+// var timeLeft = document.querySelector("timeLeft");
+// var timesDone = document.querySelector("timesDone");
 
 // start quiz variables
-var startQuiz = document.getElementById("startButton");
+var startQuiz = document.querySelector("startbtn");
 
 // question varaibles 
-var questions = document.getElementById("quizQuestions");
-var quizQuestion = document.getElementById("questionText");
-var choiceA = document.getElementById("choice0");
-var choiceB = document.getElementById("choice1");
-var choiceC = document.getElementById("choice2");
-var choiceD = document.getElementById("choice3");
-
-
-
+var questionCard = document.getElementById("questionCard");
+// var quizQuestion = document.querySelector("questionText");
+// var choiceA = document.getElementById("choice0");
+// var choiceB = document.getElementById("choice1");
+// var choiceC = document.getElementById("choice2");
+// var choiceD = document.getElementById("choice3");
 
 
 // timer
@@ -122,3 +117,19 @@ var quizCounter = setInterval(function(){
 //antime you click on an option it displays correct or wrong and then moves on to the next quesion. 
 // most important part: SEARCH UP GLOBAL INDEX. 
 // search up what is a global index. 
+
+
+// start quiz and hide cards
+function startQuiz() {
+    hideCards();
+    questionCard.removeAttribute("hidden");
+
+    firstQuestion = 0;
+    showQuestion();
+}
+
+// show questions and choices
+function showQuestion() {
+    let question = questions[firstQuestion];
+    let choices =question.choices;
+}

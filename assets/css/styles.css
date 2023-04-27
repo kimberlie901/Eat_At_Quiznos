@@ -1,9 +1,16 @@
 /** Body Styles */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: whitesmoke;
     font-family:'Courier New', Courier, monospace;
-    margin: 0;
+    margin: 0 auto;
+    line-height: 1.5;
 }
 
 /** Header Styles */
@@ -11,10 +18,12 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     text-align: center;
     background-color:pink;
     color: white;
-    padding: 2dvh;
+    margin: 25px 0;
+    text-align: center;
 }
 
 h1 {
