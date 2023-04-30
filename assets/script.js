@@ -12,11 +12,7 @@
 */
 
 
-
-// var headerContainer = document.querySelector(".header")
-// var startButton = document.querySelector(".startbtn")
-
-// start quiz variables
+// 
 var startBtn = document.querySelector("#startBtn");
 var countDown = document.querySelector("#timer");
 
@@ -134,8 +130,6 @@ function nextQuestion() {
     showQuestion(quizQuestions[currentQuestion]);
 }
 
-
-
 // question varaibles 
 // var questionCard = document.getElementById("questionCard");
 // var quizQuestion = document.querySelector("questionText");
@@ -143,19 +137,3 @@ function nextQuestion() {
 // var choiceB = document.getElementById("choice1");
 // var choiceC = document.getElementById("choice2");
 // var choiceD = document.getElementById("choice3");
-
-
-// start quiz and hide cards
-// function startQuiz() {
-//     hideCards();
-//     questionCard.removeAttribute("hidden");
-
-//     firstQuestion = 0;
-//     showQuestion();
-// }
-
-// show questions and choices
-// function showQuestion() {
-//     let question = questions[firstQuestion];
-//     let choices =question.choices;
-// }
