@@ -42,6 +42,11 @@ p {
     text-align: center;
 }
 
+#timer {
+    text-align: center;
+    float: right;
+    min-width: 50px;
+}
 
 
 

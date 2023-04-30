@@ -1,5 +1,4 @@
 /** ACCEPTANCE CRITERIA */
-
 /** WHEN I click the start button
  * THEN a timer starts and I am presented with a question
  * WHEN I answer a question
@@ -10,21 +9,20 @@
  * THEN the game is over
  * WHEN the game is over
  * THEN I can save my initials and my score
- */
+*/
+
+
+
+// var headerContainer = document.querySelector(".header")
+// var startButton = document.querySelector(".startbtn")
+
+// start quiz variables
+var startBtn = document.querySelector("#startBtn");
+var countDown = document.querySelector("#timer");
 
 
 /** 10 questions, 4 html, 4 javascript, 2 css */
-
-var headerContainer = document.querySelector(".header")
-var startButton = document.querySelector(".startbtn")
-
-startButton.addEventListener("click", function(){
-    console.log("clicked");
-    headerContainer.style.display = "none"
-    countDown()
-})
-var questions = [
-    
+var quizQuestions = [
     {
         questionText: "What does the acronym CSS stand for?",
         choices: ["a. Changing Style Sheets", "b. Cascading Style Sheets", "c. Color Style Sheets", "d. Colorbook Style Sheets"],
@@ -75,20 +73,71 @@ var questions = [
         choices: ["a. background-color", "b. color-background", "c. color-space", "d. color-choice"],
         answer: "a. background-color",
     },
-
-
 ]
 
-// time variables 
-var timerEl = document.getElementById("time");
-// var timeLeft = document.querySelector("timeLeft");
-// var timesDone = document.querySelector("timesDone");
+function questionClick() {
+    if (this.value !== quizQuestions[currentQuestion].answer) {
+        countDown -= 10;
+        if (countDown < 0) {
+            countDown = 0;
+        }
+        countDown.innerText = countDown;
+    }
+    currentQuestion++;
+    if (currentQuestion === quizQuestions.length) {
+        endQuiz();
+    } else {
+        nextQuestion();
+    }
+}
 
-// start quiz variables
-var startQuiz = document.querySelector("startbtn");
+var choicesEl = document.querySelector("#answerChoices");
+
+// start button triggers timer and first question
+startBtn.addEventListener("click", startQuiz);
+
+
+// start timer
+function startTimer() {
+    countDown.innerText = 100;
+    var timer = setInterval(function () {
+        countDown.innerText--;
+        if (countDown.innerText === 0) {
+            clearInterval(timeInterval);
+            endQuiz();}
+    }, 1000);
+};
+
+// Start quiz
+function startQuiz() {
+    starterContainer.style.display = "none";
+    questionCard.style.display = "block";
+    startTimer();
+    showQuestion(quizQuestions[0]);
+};
+
+// show questions and choices
+function showQuestion(question) {
+    questionText.innerText = question.questionText;
+    question.choices.forEach(function (choice, i) {
+        var choiceBtn = document.createElement("button");
+        choiceBtn.setAttribute("class", "choice");
+        choiceBtn.setAttribute("value", choice);
+        choiceBtn.innerText = choice;
+        choiceBtn.onclick = questionClick;
+        choicesEl.appendChild(choiceBtn);
+    });
+}
+
+// next question
+function nextQuestion() {
+    showQuestion(quizQuestions[currentQuestion]);
+}
+
+
 
 // question varaibles 
-var questionCard = document.getElementById("questionCard");
+// var questionCard = document.getElementById("questionCard");
 // var quizQuestion = document.querySelector("questionText");
 // var choiceA = document.getElementById("choice0");
 // var choiceB = document.getElementById("choice1");
@@ -96,40 +145,17 @@ var questionCard = document.getElementById("questionCard");
 // var choiceD = document.getElementById("choice3");
 
 
-// timer
-// is numbers
-// numbers decrement
-// once a number
-// console.log(quizTimer)
-function countDown() {
-    var quizTimer = 100
-var quizCounter = setInterval(function(){
-    if (quizTimer <= 0) {
-        clearInterval(quizCounter)
-    }  
-    timerEl.innerHTML=quizTimer
-   quizTimer -- 
-}, 1000)
-}
-
-// loop over the questions 
-// loop over the quiz options 
-//antime you click on an option it displays correct or wrong and then moves on to the next quesion. 
-// most important part: SEARCH UP GLOBAL INDEX. 
-// search up what is a global index. 
-
-
 // start quiz and hide cards
-function startQuiz() {
-    hideCards();
-    questionCard.removeAttribute("hidden");
+// function startQuiz() {
+//     hideCards();
+//     questionCard.removeAttribute("hidden");
 
-    firstQuestion = 0;
-    showQuestion();
-}
+//     firstQuestion = 0;
+//     showQuestion();
+// }
 
 // show questions and choices
-function showQuestion() {
-    let question = questions[firstQuestion];
-    let choices =question.choices;
-}
+// function showQuestion() {
+//     let question = questions[firstQuestion];
+//     let choices =question.choices;
+// }

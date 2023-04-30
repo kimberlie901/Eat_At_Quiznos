@@ -29,20 +29,6 @@ A timed multiple-choice quiz on the basics of Web Development that stores high s
 - I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 - SO THAT I can gauge my progress compared to my peers
 
-### Acceptance Criteria 
-
-- GIVEN I am taking a code quiz
-- WHEN I click the start button 
-- THEN a timer starts and I am presented with a question 
-- WHEN I answer a question 
-- THEN I am presented with another question 
-- WHEN I answer a question incorrectly 
-- THEN time is substracted from the clock 
-- WHEN all questions are answered or the timer reaches 0 
-- THEN the game is over 
-- WHEN the game is over 
-- THEN I can save my initials and score 
-
 ### Usage
 
 ### Technologies
@@ -67,9 +53,9 @@ A timed multiple-choice quiz on the basics of Web Development that stores high s
 
 This application was created by Kimberlie Guillaume
 
-- [Deployed Application]()
-- [Portfolio]() 
-- [LinkedIn]()
+- [Github](https://github.com/kimberlie901)
+- [Portfolio](https://kimberlie901.github.io/Professional_Portfolio/) 
+- [LinkedIn](https://www.linkedin.com/in/kjguill1024/)
 
 ### License 
 

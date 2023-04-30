@@ -15,7 +15,7 @@
             <h1><strong>Are You Smarter Than a 5th Grader?: Web Development Edition</strong></h1>
         </nav>
         <!-- shows how much time is left-->
-        <time><b>Time Left:</b> <span id="time"></span></time>
+        <time><b>Time Left:</b> <span id="timer"></span></time>
         <div class="row">
             <!-- link to high scores -->
             <a href="HighScores.html">View HighScores</a>
@@ -28,34 +28,35 @@
             Incorrect answers will penalize your time.
         </p>
         <div class="quizStart">
-            <button id="startBtn class=startBtn">START QUIZ</button>
+            <button id="startBtn">START QUIZ</button>
         </div>
     </section>
 
     <!-- question and answers section -->
     <section id=questionCard class="hide">
-        <h1 id="questionText">Question
-            <div id="answerChoices" class="answersList">
-                <button id="choice1"> Answer 1</button>
-                <button id="choice2"> Answer 2</button>
-                <button id="choice3"> Answer 3</button>
-                <button id="choice4"> Answer 4</button>
+        <h1 id="questionText">Question</h1>
+            <div id="answerChoices">
             </div>
-        </h1>
         <div id="nextQuestion" class="quizAnswers hide">
-            <p id="correctAnswer" class="=hide"> Correct Answer </p>
-            <p id="wrongAnswer" class="hide"> Wrong Answer </p>
+            <p id="correctAnswer" class="=hide">Correct Answer</p>
+            <p id="wrongAnswer" class="hide">Wrong Answer</p>
         </div>
     </section>
 
-    <!-- initials and score section-->
+    <!-- score and initials section-->
     <section id="scoreCard" class="hide">
         <h2>Quiz Done!</h2>
-        <p>Your final score is <span id="finalScore"></span></p>
-        <button id="sumbitBtn"> Submit Quiz </button>
+        <p>Your Final Score:<span id="finalScore"></span></p>
+        <form class="inline-form" id="submission-form">
+            <label for="initials">Enter Your initials:</label>
+            <input type="text" id="initials">
+            <button id="sumbitBtn" class="button">Submit Quiz</button>
+        </form>
     </section>
 
-    <script src="script.js"></script>
+   
+
+    <script src="./assets/script.js"></script>
 
 
 </body>
