@@ -16,7 +16,9 @@
 
 var startBtn = document.querySelector("#startBtn");
 var countDown = document.querySelector("#timer");
-
+var timer; 
+var score = 0;
+var resultText = document.querySelector("#finalScore");
 
 var currentQuestion = 0;
 // to keep track of which question user is on 
@@ -78,12 +80,11 @@ function questionClick() {
     if (this.value !== quizQuestions[currentQuestion].answer) {
         countDown.innerText -= 10;
         if (countDown.innerText < 0) {
-            countDown = 0;
+            countDown.innerText = 0;
         }
-        countDown.innerText = countDown;
-    }
+    } else score = score +1; 
     currentQuestion++;
-    if (currentQuestion === quizQuestions.length) {
+    if (currentQuestion === quizQuestions.length || countDown.innerText == "0") {
         endQuiz();
     } else {
         showQuestion(quizQuestions[currentQuestion]);
@@ -101,10 +102,9 @@ startBtn.addEventListener("click", startQuiz);
 // start timer
 function startTimer() {
     countDown.innerText = 100;
-    var timer = setInterval(function () {
+    timer = setInterval(function () {
         countDown.innerText--;
         if (countDown.innerText === 0) {
-            clearInterval(timeInterval);
             endQuiz();}
     }, 1000);
 };
@@ -135,17 +135,10 @@ function showQuestion(question) {
 }
 
 
-// next question
-// function nextQuestion() {
-//     showQuestion(quizQuestions[currentQuestion]);
-// }
-
-
-
-// question varaibles 
-// var questionCard = document.getElementById("questionCard");
-// var quizQuestion = document.querySelector("questionText");
-// var choiceA = document.getElementById("choice0");
-// var choiceB = document.getElementById("choice1");
-// var choiceC = document.getElementById("choice2");
-// var choiceD = document.getElementById("choice3");
+// end quiz
+function endQuiz() {
+    clearInterval(timer);
+    questionCard.style.display = "none";
+    // resultContainer.style.display = "block";
+    resultText.innerText = score + " points!";
+}
