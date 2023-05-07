@@ -8,7 +8,7 @@ A timed multiple-choice quiz on the basics of Web Development that stores high s
 
 - [Installation](#installation)
 - [User Story](#user-story)
-- [Usage](#usage)
+- [Instructions](#instructions)
 - [Technologies](#technologies)
 - [Application Screenshots](#application-screenshots)
 - [Demo Video](#demo-video)
@@ -20,7 +20,7 @@ A timed multiple-choice quiz on the basics of Web Development that stores high s
 ### Installation 
 
 1. Clone or download the repository to your own local machine. 
-2. Open the HTML file in the browser of your choice. 
+2. Open the HTML (index.html) file in the browser of your choice. 
 3. Take the quiz 
 
 ### User Story
@@ -29,7 +29,20 @@ A timed multiple-choice quiz on the basics of Web Development that stores high s
 - I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 - SO THAT I can gauge my progress compared to my peers
 
-### Usage
+### Instructions
+
+1. Click "Start Quiz" to begin the quiz.
+    - The timer will start and the first question will appear.
+    - Total time is 100 seconds.
+    - 10 questions total.
+2. A series of questions will appear with multiple choice answers. 
+    - Click on the answer you think is correct.
+    - If you answer incorrectly, 10 seconds will be subtracted from the timer.
+3. When all questions are answered or the timer reaches 0, the quiz is over.
+4. At the end of the quiz, the user will be able to save their high score and initials.
+    - Enter your initials and click "Submit".
+    - Your score will be saved to the High Scores page.
+5. It will show a list of high scores.
 
 ### Technologies
 
