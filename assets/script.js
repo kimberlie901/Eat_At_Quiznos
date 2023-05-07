@@ -140,8 +140,7 @@ function showQuestion(question) {
 function endQuiz() {
     clearInterval(timer);
     questionCard.style.display = "none";
-    // resultContainer.style.display = "block";
-    scoreCardContainer.style.display = "block";
     resultText.innerText = score + " points!";
 
 }
+
