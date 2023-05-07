@@ -11,8 +11,6 @@ A timed multiple-choice quiz on the basics of Web Development that stores high s
 - [Instructions](#instructions)
 - [Technologies](#technologies)
 - [Application Screenshots](#application-screenshots)
-- [Demo Video](#demo-video)
-- [Credits](#credits)
 - [Websites](#websites)
 - [Author](#author)
 - [License](#license)
@@ -53,9 +51,9 @@ A timed multiple-choice quiz on the basics of Web Development that stores high s
 
 ### Application Screenshots
 
-### Demo Video
-
-### Credits
+![Screenshot of the Code Quiz](assets/images/image1.png)
+![Screenshot of the Code Quiz](assets/images/image2.png)
+![Screenshot of the Code Quiz](assets/images/image3.png)
 
 ### Websites
 
