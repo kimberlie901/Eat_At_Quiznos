@@ -48,6 +48,21 @@ p {
     min-width: 50px;
 }
 
+#questionCard {
+    text-align: center;
+}
+
+.quizStart {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+#startBtn {
+    background-color: pink;
+    color: black;
+}
 
 
 

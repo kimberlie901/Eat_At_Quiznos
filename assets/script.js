@@ -10,14 +10,17 @@
  * WHEN the game is over
  * THEN I can save my initials and my score
 */
+/** 10 questions, 4 html, 4 javascript, 2 css */
 
 
-// 
+
 var startBtn = document.querySelector("#startBtn");
 var countDown = document.querySelector("#timer");
 
 
-/** 10 questions, 4 html, 4 javascript, 2 css */
+var currentQuestion = 0;
+// to keep track of which question user is on 
+
 var quizQuestions = [
     {
         questionText: "What does the acronym CSS stand for?",
@@ -73,8 +76,8 @@ var quizQuestions = [
 
 function questionClick() {
     if (this.value !== quizQuestions[currentQuestion].answer) {
-        countDown -= 10;
-        if (countDown < 0) {
+        countDown.innerText -= 10;
+        if (countDown.innerText < 0) {
             countDown = 0;
         }
         countDown.innerText = countDown;
@@ -83,9 +86,11 @@ function questionClick() {
     if (currentQuestion === quizQuestions.length) {
         endQuiz();
     } else {
-        nextQuestion();
+        showQuestion(quizQuestions[currentQuestion]);
     }
 }
+
+
 
 var choicesEl = document.querySelector("#answerChoices");
 
@@ -104,6 +109,7 @@ function startTimer() {
     }, 1000);
 };
 
+
 // Start quiz
 function startQuiz() {
     starterContainer.style.display = "none";
@@ -112,9 +118,12 @@ function startQuiz() {
     showQuestion(quizQuestions[0]);
 };
 
+
 // show questions and choices
 function showQuestion(question) {
     questionText.innerText = question.questionText;
+    // clear old choices
+    choicesEl.innerHTML = "";
     question.choices.forEach(function (choice, i) {
         var choiceBtn = document.createElement("button");
         choiceBtn.setAttribute("class", "choice");
@@ -125,10 +134,13 @@ function showQuestion(question) {
     });
 }
 
+
 // next question
-function nextQuestion() {
-    showQuestion(quizQuestions[currentQuestion]);
-}
+// function nextQuestion() {
+//     showQuestion(quizQuestions[currentQuestion]);
+// }
+
+
 
 // question varaibles 
 // var questionCard = document.getElementById("questionCard");
