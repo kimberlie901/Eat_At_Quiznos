@@ -57,8 +57,6 @@ A timed multiple-choice quiz on the basics of Web Development that stores high s
 
 ### Websites
 
-- [Deployed Application]()
-- [Github]()
 
 ### Author
 
