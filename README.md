@@ -57,6 +57,8 @@ A timed multiple-choice quiz on the basics of Web Development that stores high s
 
 ### Websites
 
+- [Github Repository](https://github.com/kimberlie901/JavaScript_Quiz)
+- [Deployed Application](https://kimberlie901.github.io/JavaScript_Quiz/)
 
 ### Author
 
