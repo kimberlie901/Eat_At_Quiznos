@@ -36,16 +36,20 @@
     <section id="questionCard" class="hide">
         <h1 id="questionText">Question</h1>
             <div id="answerChoices">
+                <button class="choice"></button>
+                <button class="choice"></button>
+                <button class="choice"></button>
+                <button class="choice"></button>
             </div>
     </section>
 
     <!-- score and initials section-->
-    <section id="scoreCard" class="hide">
-        <p>Your Final Score:<span id="finalScore"></span></p>
-        <form class="inline-form" id="submission-form">
+    <section id="scoreCardContainer" style="display: none;">
+        <h2>Save Your Score:</h2>
+        <form id="saveScore">
             <label for="initials">Enter Your initials:</label>
             <input type="text" id="initials">
-            <button id="sumbitBtn" class="button">Submit Quiz</button>
+            <button id="sumbitBtn" class="saveScoreBtn">Submit Quiz</button>
         </form>
     </section>
 

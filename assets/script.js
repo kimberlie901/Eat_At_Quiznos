@@ -19,10 +19,12 @@ var countDown = document.querySelector("#timer");
 var timer; 
 var score = 0;
 var resultText = document.querySelector("#finalScore");
+var saveScore = document.querySelector("#saveScore");
+saveScore.addEventListener("submit", saveScore);
+
 
 var currentQuestion = 0;
 // to keep track of which question user is on 
-
 var quizQuestions = [
     {
         questionText: "What does the acronym CSS stand for?",
@@ -135,10 +137,15 @@ function showQuestion(question) {
 }
 
 
+
+
 // end quiz
 function endQuiz() {
     clearInterval(timer);
     questionCard.style.display = "none";
     // resultContainer.style.display = "block";
     resultText.innerText = score + " points!";
+    resultText.style.display = "none"
+    scoreCardContainer.style.display = "block";
+
 }
